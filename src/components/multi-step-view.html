@@ -1,0 +1,8 @@
+<template>
+  <h2>${currentStep} of ${totalSteps}</h2>
+  <compose view-model="${currentViewModelPath}" model.bind="model" compose.ref="composeRef"></compose>
+  <button click.delegate="cancel()">Cancel</button>
+  <button if.bind="backButtonActive" click.delegate="back()">Back</button>
+  <button if.bind="nextButtonActive" click.delegate="next()">Next</button>
+  <button if.bind="completeButtonActive" click.delegate="complete({multiStepViewData: model})">Finish</button>
+</template>
