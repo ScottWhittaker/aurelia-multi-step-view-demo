@@ -1,6 +1,10 @@
 export class Register {
 
-  viewModels = ['home/home'];
+  viewModels = [
+    'register/register-step-one',
+    'register/register-step-two',
+    'register/register-step-three'
+  ];
 
   multiStepViewCancel() {
     // Navigate home

@@ -58,6 +58,9 @@ export class MultiStepViewCustomElement {
   }
 
   _isValidView() {
+    if (!this.composeRef.currentViewModel.isValid) {
+      throw new Error(`${this.composeRef.viewModel} must implement an isValid method returning a boolean`);
+    }
     return this.composeRef.currentViewModel.isValid();
   }
 }
