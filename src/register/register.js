@@ -1,3 +1,7 @@
+import {inject} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+
+@inject(Router)
 export class Register {
 
   viewModels = [
@@ -6,11 +10,16 @@ export class Register {
     'register/register-step-three'
   ];
 
+  constructor(router) {
+    this.router = router;
+  }
+
   multiStepViewCancel() {
-    // Navigate home
+    this.router.navigate('home');
   }
 
   multiStepViewComplete(multiStepViewData) {
-    // Navigate to register completion view
+    // TODO do something with data
+    this.router.navigate('register-complete');
   }
 }
