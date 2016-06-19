@@ -1,6 +1,6 @@
 import {inject} from 'aurelia-framework';
 import {DialogService} from 'aurelia-dialog';
-import {RegisterDialog} from 'register/register-dialog';
+import {RegisterDialog} from 'dialogs/register-dialog';
 
 @inject(DialogService)
 export class Home {
