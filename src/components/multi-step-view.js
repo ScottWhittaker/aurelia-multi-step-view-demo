@@ -4,6 +4,7 @@ export class MultiStepViewCustomElement {
 
   @bindable cancel;
   @bindable complete;
+  @bindable title;
   @bindable viewModels;
 
   backButtonActive = false;
