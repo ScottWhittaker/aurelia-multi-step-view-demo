@@ -1,3 +1,12 @@
 <template>
-  <h2>Step One</h2>
+  <form validation-renderer="form-validation">
+    <div class="form-group">
+      <label class="control-label" for="first-name">First Name</label><br>
+      <input type="text" id="first-name" value.bind="firstName & validate">
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name</label><br>
+      <input type="text" id="last-name" value.bind="lastName & validate">
+    </div>
+  </form>
 </template>

@@ -1,3 +1,12 @@
 <template>
-  <h2>Step Two</h2>
+  <p>
+    Hi ${model.firstName}<br>
+    Please provide your email address...
+  </p>
+  <form validation-renderer="form-validation">
+    <div class="form-group">
+      <label class="control-label" for="email">Email</label><br>
+      <input type="email" id="email" value.bind="email & validate">
+    </div>
+  </form>
 </template>
