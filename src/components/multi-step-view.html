@@ -1,8 +1,19 @@
 <template>
-  <h2>${currentStep} of ${totalSteps}</h2>
-  <compose view-model="${currentViewModelPath}" model.bind="model" compose.ref="composeRef"></compose>
-  <button click.delegate="cancel()">Cancel</button>
-  <button if.bind="backButtonActive" click.delegate="back()">Back</button>
-  <button if.bind="nextButtonActive" click.delegate="next()">Next</button>
-  <button if.bind="completeButtonActive" click.delegate="complete({multiStepViewData: model})">Finish</button>
+  <multi-step-view-header>
+    <h2>Title</h2>
+    <span>${currentStep} of ${totalSteps}</span>
+  </multi-step-view-header>
+  <multi-step-view-body>
+    <compose view-model="${currentViewModelPath}" model.bind="model" compose.ref="composeRef" containerless></compose>
+  </multi-step-view-body>
+  <multi-step-view-footer>
+    <div>
+      <button click.delegate="cancel()">Cancel</button>
+    </div>
+    <div>
+      <button if.bind="backButtonActive" click.delegate="back()">Back</button>
+      <button if.bind="nextButtonActive" click.delegate="next()">Next</button>
+      <button if.bind="completeButtonActive" click.delegate="complete({multiStepViewData: model})">Finish</button>
+    </div>
+  </multi-step-view-footer>
 </template>
