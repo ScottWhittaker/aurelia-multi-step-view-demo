@@ -1,18 +1,9 @@
 <template>
-  <p>Please check your details.</p>
-  <table>
-    <tr>
-      <td>First Name</td>
-      <td>${model.firstName}</td>
-    </tr>
-    <tr>
-      <td>Last Name</td>
-      <td>${model.lastName}</td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td>${model.email}</td>
-    </tr>
-  </table>
-  <p>Go back and fix any mistakes if you need to.</p>
+  <p>Please check your details...</p>
+  <dl>
+    <dt>Name</dt>
+    <dd>${model.firstName} ${model.lastName}</dd>
+    <dt>Email</dt>
+    <dd>${model.email}</dd>
+  </dl>
 </template>
