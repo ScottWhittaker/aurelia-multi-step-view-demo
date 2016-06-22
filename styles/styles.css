@@ -145,8 +145,26 @@ input {
   content: "\02718";
 }
 
-/* multi-step-view
-------------------------------*/
+
+/*
+multi-step-view
+
+Note that styles for multi-step-view are defined here but it would
+be preferable to bundle the styles with the component itself.
+
+In multi-step-view-template.html
+<require from="./multi-step-view.css"></require>
+
+However, when this approach is taken the styles get added to the
+document after styles/styles.css. This makes theming the component
+difficult as the cascade cannot be utilised to customise it.
+
+The issue is discussed here relating to the aurelia-dialog plugin...
+
+https://github.com/aurelia/dialog/issues/101#issuecomment-226961299
+
+Need to check back for a solution at a later date.
+*/
 
 multi-step-view {
   display: flex;
@@ -197,6 +215,7 @@ multi-step-view-header span {
   border-radius: var(--default-border-radius);
   background-color: var(--grey-light);
 }
+
 
 /* ai-dialog
 ------------------------------*/
