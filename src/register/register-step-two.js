@@ -29,6 +29,6 @@ export class RegisterStepTwo {
   }
 
   _updateModel() {
-    this.model.email = this.email;
+    this.model.email = this.email.trim();
   }
 }

@@ -32,7 +32,7 @@ export class RegisterStepOne {
   }
 
   _updateModel() {
-    this.model.firstName = this.firstName;
-    this.model.lastName = this.lastName;
+    this.model.firstName = this.firstName.trim();
+    this.model.lastName = this.lastName.trim();
   }
 }
